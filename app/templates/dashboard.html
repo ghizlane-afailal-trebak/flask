@@ -1,0 +1,104 @@
+{% extends 'app.html' %}
+{% block content %}
+
+<div class="container py-5">
+  <div class="row">
+    <!-- Sidebar Profil -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="my-2">Mon Profil</h4>
+        </div>
+        <div class="card-body text-center">
+          <div class="mb-3">
+            <img src="https://ui-avatars.com/api/?name={{ user[1] }}&background=random&rounded=true&size=150" 
+                 class="rounded-circle img-thumbnail" alt="Avatar">
+          </div>
+          <h3 class="h5">{{ user[1] }}</h3>
+          <p class="text-muted">{{ user[2] }}</p>
+          <hr>
+          <div class="d-grid gap-2">
+            <a href="/logout" class="btn btn-outline-danger">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h4 class="my-2">Tableau de Bord</h4>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-info">
+            Bienvenue dans votre espace personnel, {{ user[1] }}!
+          </div>
+
+          <!-- Statistiques -->
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Activité</h5>
+                  <p class="display-6">12</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Messages</h5>
+                  <p class="display-6">5</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Notifications</h5>
+                  <p class="display-6">3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dernières activités -->
+          <h5 class="mt-4 mb-3">Dernières activités</h5>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Connexion réussie
+              <span class="badge bg-secondary">Aujourd'hui</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Mise à jour du profil
+              <span class="badge bg-secondary">Hier</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Nouveau message reçu
+              <span class="badge bg-secondary">12/06</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS additionnel -->
+<style>
+  .card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .img-thumbnail {
+    border: 3px solid #dee2e6;
+    padding: 3px;
+  }
+</style>
+
+{% endblock %}

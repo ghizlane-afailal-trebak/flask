@@ -1,0 +1,223 @@
+/* 🌌 Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 📦 Conteneur principal avec effet Glassmorphism */
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 📝 Formulaire ultra moderne */
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* 🎨 Boutons stylés */
+.btn-primary {
+    background: linear-gradient(135deg, #e8c374, #fad0c4);
+    color: white;
+    padding: 12px 18px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #fad0c4, #1a3227);
+    transform: scale(1.05);
+}
+
+/* 📜 Liste des informations */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1em;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* 🔗 Liens stylés */
+a {
+    color: #f1c40f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffdd57;
+}
+
+/* 🌟 Navbar ultra moderne */
+.navbar {
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.nav-link {
+    font-size: 1.0em;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #a7eca4a3 !important;
+    transform: scale(1.1);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌟 Styles du Dashboard */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.dashboard-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* 📦 Carte du profil */
+.profile-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.02);
+}
+
+/* 👤 Image du profil */
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    margin-bottom: 15px;
+}
+
+/* 📝 Informations utilisateur */
+.user-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.user-email {
+    font-size: 1.1em;
+    color: #ffdd57;
+}
+
+.user-info-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.user-info-list li {
+    margin: 8px 0;
+}
+
+/* 🔘 Bouton de déconnexion */
+.profile-footer .btn-danger {
+    background: linear-gradient(135deg, #ff6b6b, #ee5253);
+    border: none;
+    padding: 12px 18px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-footer .btn-danger:hover {
+    background: linear-gradient(135deg, #ee5253, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* 🚨 Message d'erreur */
+.error-message {
+    font-size: 1.2em;
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 20px;
+}
